@@ -1,5 +1,5 @@
 <template>
-  <button class="level">
+  <button class="level" @click="onClickLevelHandle">
     <h3>{{ title }}</h3>
     <br />
     <p>{{ content }}</p>
@@ -15,6 +15,11 @@ export default {
     content: {
       type: String,
       require: true,
+    },
+  },
+  methods: {
+    onClickLevelHandle() {
+      this.$emit("lvclick");
     },
   },
 };
